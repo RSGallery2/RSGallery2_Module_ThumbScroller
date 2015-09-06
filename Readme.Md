@@ -17,6 +17,7 @@ https://drafts.csswg.org/css-transitions-1/
 
 "rsscroller_thumb"
 http://manos.malihu.gr/repository/jquery-thumbnail-scroller/demo/examples/demo.html#
+http://manos.malihu.gr/jquery-thumbnail-scroller/
 
 .rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}
 
