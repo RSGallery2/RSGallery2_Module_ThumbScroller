@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade">
+    <name>mod_rsgallery2_thumb_scroller</name>
+    <author>RSGallery2 Team</author>
+	<creationDate>06. Sep 2015</creationDate>
+	<copyright>(C) 2010-2015 RSGallery2 Team. All rights reserved.</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+    <authorEmail>team@rsgallery2.nl</authorEmail>
+    <authorUrl>www.rsgallery2.nl</authorUrl>
+    <version>4.0.0</version>
+    <description>MOD_RSGALLERY2_THUMB_SCROLLER_DESC</description>
+	
+	<files>
+		<filename>mod_rsgallery2_thumb_scroller.xml</filename>
+		<filename module="mod_rsgallery2_thumb_scroller">mod_rsgallery2_thumb_scroller.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.sys.ini</language>
+    </languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="useACL" type="radio" default="0" label="Use ACL" description="Do you want the module to check if people have access rights to the galleries of the thumbnails (only works when ACL is enabled)?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="usegalselect" type="radio" default="0" label="Limit to certain galleries" description="Do you want limit the thumbnails displayed to certain galleries?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="galselect" type="text" default="" label="Gallery id's" description="Enter one or more gallery id's seperated by a comma: 5,6,10.">
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="ScrollDirection" type="list" default="up" label="Scroll Direction" description="Scroll Direction">
+					<option value="up">Up</option>
+					<option value="down">Down</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="ScrollAmount" type="text" size="20" default="2" label="Scroll Amount" description="Number of pixels to scroll at each step. Default is 2."/>
+				<field name="ScrollDelay" type="text" size="20" default="50" label="Scroll Delay" description="Number of ms to wait between steps. Default is 50."/>
+				<field name="@spacer" type="spacer" default="" label="" description=""/> 
+				<field name="Clickornot" type="radio" default="1" label="Images linked?" description="Should the pictures be linked?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="link2gal" type="radio" default="dis" label="Gallery or display" description="Link to the gallery or to the display view (the actual image).">
+					<option value="gal">Gallery</option>
+					<option value="dis">Display</option>
+				</field>
+				<field name="Pause" type="radio" default="1" label="Pause OnMouseOver?" description="Should the slideshow pause onMouseOver?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="Width" type="text" size="20" default="100" label="Scroll Width" description="Default is 100%, ajust when you want it to be smaller/ larger then that."/>
+				<field name="widthunit" type="radio" default="%" label="Width unit" description="Width in pixels or a percentage">
+					<option value="px">Px</option>
+					<option value="%">%</option>
+				</field>
+				<field name="Height" type="text" size="20" default="150" label="Scroll Height" description="Default is 150"/>
+				<field name="heightunit" type="radio" default="px" label="Height unit" description="Height in pixels or a percentage">
+					<option value="px">Px</option>
+					<option value="%">%</option>
+				</field>		
+				<field name="@spacer" type="spacer" default="" label="" description=""/>	
+				<field name="PicsNum" type="text" size="20" default="5" label="Number of pics" description="Number of pictures to display"/>
+				<field name="PickMethod" type="list" default="Rand()" label="Display Method" description="Display Method">
+					<option value="Rand()">Random</option>
+					<option value="Date">Date</option>
+					<option value="Hits">Hits</option>
+					<option value="Votes">Votes</option>
+					<option value="Rating">Rating</option>
+				</field>	
+				<field name="@spacer" type="spacer" default="" label="" description=""/>
+				<field name="usecss" type="radio" default="1" label="Use CSS entered below?" description="Do you want the module to use the CSS entered below? Note: It is not valid to use css outside the head, you can also add the css below to your own css stylesheet, then again, the marquee tag (used by this module to scroll) is also not valid.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="css" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="CSS" description="Edit CSS to be included in the script here. Note: don't use return, simply type everything on the same line."/>	
+
+				<field name="filteringspacer3" type="spacer" hr="true" />
+			</fieldset>			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
