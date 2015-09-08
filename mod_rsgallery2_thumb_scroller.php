@@ -33,30 +33,6 @@ $document->addStyleSheet($url);
 global $rsgConfig;
 
 //--- Parameters --------------------------------------------------------------
-// Number of  latest galleries to display = number of rows times the number of columns
-$countrows			= (int) $params->get('countrows', 		'1');
-$countcolumns		= (int) $params->get('countcolumns',	'1');
-$count				= $countrows * $countcolumns;
-// Select one or more galleries and set if their subgalleries (children) should be included
-$galleryids			= $params->get('galleryids', 			'0'); //string, e.g. 3,8,42
-$includeChildren	= $params->get('includechildren', 		'0');
-// Display type of image to show: thumb (0), display (1), original (2)
-$displaytype 		= (int) $params->get('displaytype', 	'0');
-// CSS height and/or width attribute for the img and the div element (0=no attribute)
-$imageheight 		= (int) $params->get('imageheight', 	'0');
-$imagewidth 		= (int) $params->get('imagewidth', 		'0');
-$divheight 			= (int) $params->get('divheight', 		'0');
-$divwidth 			= (int) $params->get('divwidth', 		'0');
-// ... for the div with class mod_rsgallery2_latest_galleries_name
-$divNameHeight		= (int) $params->get('divnameheight', 	'0');
-//$divNameWidth		= (int) $params->get('divnamewidth', 	'0');	// The width setting of the class mod_rsgallery2_latest_galleries_attibute would overrule this, so makes no sense to do this now?
-// Display the gallery name
-$displayname 		= $params->get('displayname', 			'0');
-// Display the date and its format
-$displaydate 		= $params->get('displaydate', 			'0');
-$dateformat 		= $params->get('dateformat', 			'd-m-Y');
-$ImageLinkType      = $params->get('imagelinktype', 		'0');
-
 $Clickornot 	= 			$params->get( 'Clickornot',		'1');
 $link2gal		= trim   (	$params->get( 'link2gal',		'dis'));
 $Pause			= 			$params->get( 'Pause',			'1');

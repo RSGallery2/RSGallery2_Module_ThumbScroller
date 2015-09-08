@@ -30,7 +30,7 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field name="@spacer" type="spacer" default="" label="" description="" />
-				<field name="useACL" type="radio" default="0" label="Use ACL" description="Do you want the module to check if people have access rights to the galleries of the thumbnails (only works when ACL is enabled)?">
+				<field name="UseACL" type="radio" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL_DESC">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
 				</field>
