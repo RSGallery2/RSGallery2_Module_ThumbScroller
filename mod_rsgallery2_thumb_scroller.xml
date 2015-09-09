@@ -31,63 +31,64 @@
 			<fieldset name="basic">
 				<field name="@spacer" type="spacer" default="" label="" description="" />
 				<field name="UseACL" type="radio" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL_DESC">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="usegalselect" type="radio" default="0" label="Limit to certain galleries" description="Do you want limit the thumbnails displayed to certain galleries?">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
+				<field name="UseGallerySelection" type="radio" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES" description="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="galselect" type="text" default="" label="Gallery id's" description="Enter one or more gallery id's seperated by a comma: 5,6,10.">
+				<field name="SelectGallery" type="text" default="" label="" description="">
 				</field>
-				<field name="@spacer" type="spacer" default="" label="" description="" />
-				<field name="ScrollDirection" type="list" default="up" label="Scroll Direction" description="Scroll Direction">
-					<option value="up">Up</option>
-					<option value="down">Down</option>
-					<option value="left">Left</option>
-					<option value="right">Right</option>
+				<field name="@spacer" type="spacer" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC" />
+				<field name="ScrollDirection" type="list" default="up" label="MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION" description="">
+					<option value="up">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_UP</option>
+					<option value="down">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_DOWN</option>
+					<option value="left">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_LEFT</option>
+					<option value="right">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_RIGHT</option>
 				</field>
-				<field name="ScrollAmount" type="text" size="20" default="2" label="Scroll Amount" description="Number of pixels to scroll at each step. Default is 2."/>
-				<field name="ScrollDelay" type="text" size="20" default="50" label="Scroll Delay" description="Number of ms to wait between steps. Default is 50."/>
+				<field name="ScrollAmount" type="text" size="20" default="2" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT_DESC"/>
+				<field name="ScrollDelay" type="text" size="20" default="50" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY_DESC"/>
 				<field name="@spacer" type="spacer" default="" label="" description=""/> 
-				<field name="Clickornot" type="radio" default="1" label="Images linked?" description="Should the pictures be linked?">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
-				</field>
-				<field name="link2gal" type="radio" default="dis" label="Gallery or display" description="Link to the gallery or to the display view (the actual image).">
-					<option value="gal">Gallery</option>
-					<option value="dis">Display</option>
-				</field>
-				<field name="Pause" type="radio" default="1" label="Pause OnMouseOver?" description="Should the slideshow pause onMouseOver?">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
+                <field name="ImageLinkType" type="list" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE" description="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DESC">
+                    <option value="0">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_NO_LINK</option>
+                    <option value="1">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_PARENT_GALLERY_VIEW</option>
+                    <option value="2">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SINGLE_IMAGE_VIEW</option>
+                    <option value="3">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SLIDE_SHOW_VIEW</option>
+                    <option value="4">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_ORIGINAL_SIZE_IMAGE</option>
+                    <option value="5">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DISPLAY_SIZE_IMAGE</option>
+                    <option value="6">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_THUMB_SIZE_IMAGE_VIEW</option>
+                </field>
+				<field name="DoPause" type="radio" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER" description="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
 				<field name="@spacer" type="spacer" default="" label="" description="" />
-				<field name="Width" type="text" size="20" default="100" label="Scroll Width" description="Default is 100%, ajust when you want it to be smaller/ larger then that."/>
-				<field name="widthunit" type="radio" default="%" label="Width unit" description="Width in pixels or a percentage">
-					<option value="px">Px</option>
-					<option value="%">%</option>
+				<field name="ScrollWidth" type="text" size="20" default="100" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH_DESC"/>
+				<field name="WidthUnit" type="radio" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
+					<option value="px">MOD_RSGALLERY2_THUMB_SCROLLER_PIXEL</option>
+					<option value="%">MOD_RSGALLERY2_THUMB_SCROLLER_PERCENT</option>
 				</field>
-				<field name="Height" type="text" size="20" default="150" label="Scroll Height" description="Default is 150"/>
-				<field name="heightunit" type="radio" default="px" label="Height unit" description="Height in pixels or a percentage">
+				<field name="ScrollHeight" type="text" size="20" default="150" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_HEIGHT" description="Default is 150"/>
+				<field name="HeightUnit" type="radio" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
 					<option value="px">Px</option>
 					<option value="%">%</option>
 				</field>		
 				<field name="@spacer" type="spacer" default="" label="" description=""/>	
-				<field name="PicsNum" type="text" size="20" default="5" label="Number of pics" description="Number of pictures to display"/>
-				<field name="PickMethod" type="list" default="Rand()" label="Display Method" description="Display Method">
-					<option value="Rand()">Random</option>
-					<option value="Date">Date</option>
-					<option value="Hits">Hits</option>
-					<option value="Votes">Votes</option>
-					<option value="Rating">Rating</option>
+				<field name="ImageNumber" type="text" size="20" default="5" label="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES" description="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES_DESC"/>
+				<field name="ImageSource" type="list" default="Rand()" label="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE" description="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE_DESC">
+					<option value="Rand()">MOD_RSGALLERY2_THUMB_SCROLLER_RANDOM</option>
+					<option value="Date">MOD_RSGALLERY2_THUMB_SCROLLER_DATE</option>
+					<option value="Hits">MOD_RSGALLERY2_THUMB_SCROLLER_HITS</option>
+					<option value="Votes">MOD_RSGALLERY2_THUMB_SCROLLER_VOTES</option>
+					<option value="Rating">MOD_RSGALLERY2_THUMB_SCROLLER_RATING</option>
 				</field>	
 				<field name="@spacer" type="spacer" default="" label="" description=""/>
-				<field name="usecss" type="radio" default="1" label="Use CSS entered below?" description="Do you want the module to use the CSS entered below? Note: It is not valid to use css outside the head, you can also add the css below to your own css stylesheet, then again, the marquee tag (used by this module to scroll) is also not valid.">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
+				<field name="ActivateUserCss" type="radio" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="css" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="CSS" description="Edit CSS to be included in the script here. Note: don't use return, simply type everything on the same line."/>	
+				<field name="css" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>	
 
 				<field name="filteringspacer3" type="spacer" hr="true" />
 			</fieldset>			
