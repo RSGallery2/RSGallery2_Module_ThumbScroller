@@ -15,7 +15,7 @@
 		<filename module="mod_rsgallery2_thumb_scroller">mod_rsgallery2_thumb_scroller.php</filename>
 		<filename>index.html</filename>
 		<folder>css</folder>
-		<folder>images</folder>
+		<!--folder>images</folder-->
 		<folder>tmpl</folder>
 	</files>
 	
@@ -38,7 +38,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="SelectGalleries" type="text" default="" label="" description="">
+				<field name="SelectGalleries" type="text" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC">
 				</field>
 				<field name="@spacer" type="spacer" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC" />
 				<field name="ScrollDirection" type="list" default="up" label="MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION" description="">
