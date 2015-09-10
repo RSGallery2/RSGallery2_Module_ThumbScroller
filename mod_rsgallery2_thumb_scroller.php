@@ -33,6 +33,9 @@ $document->addStyleSheet($url);
 global $rsgConfig;
 
 //--- Parameters --------------------------------------------------------------
+
+
+/*
 $Clickornot 	= 			$params->get( 'Clickornot',		'1');
 $link2gal		= trim   (	$params->get( 'link2gal',		'dis'));
 $Pause			= 			$params->get( 'Pause',			'1');
@@ -52,21 +55,29 @@ $ScrollSpace	= intval (	$params->get( 'ScrollSpace',	'2'));
 $BugSpace		= intval (	$params->get( 'BugSpace',		'10'));
 $usecss			=			$params->get( 'usecss',			'1');
 $css			=			$params->get( 'css');
+*/
 
+$UseACL              =		   $params->get( 'UseACL',			     '0');
+$UseGallerySelection =		   $params->get( 'UseGallerySelection', '0');
+$SelectGalleries     = trim   ($params->get( 'SelectGalleries',	 '');
+$ScrollDirection     = trim   ($params->get( 'ScrollDirection',	 'up');
+$ScrollAmount        = intval ($params->get( 'ScrollAmount',		 '');
+$ScrollDelay         = intval ($params->get( 'ScrollDelay',		 '');
 
+$ImageLinkType       =		   $params->get( 'ImageLinkType',		 '');
+$DoPause             =		   $params->get( 'DoPause',			 '');
 
+$ScrollWidth         = intval ($params->get( 'ScrollWidth',		 ''));
+$ScrollWidthUnit     =		   $params->get( 'ScrollWidthUnit',	 '');
 
+$ScrollHeight        = intval ($params->get( 'ScrollHeight',		 '');
+$ScrollHeightUnit    =		   $params->get( 'ScrollHeightUnit',	 '');
 
+$ImageNumber         = intval ($params->get( 'ImageNumber',		 '');
+$ImageSource         =		   $params->get( 'ImageSource',		 '');
 
-
-
-
-
-
-
-
-
-
+$ActivateUserCss     =		   $params->get( 'ActivateUserCss',	 '');
+$UserCss             =		   $params->get( 'UserCss',			 '');
 
 
 //// Include the syndicate functions only once

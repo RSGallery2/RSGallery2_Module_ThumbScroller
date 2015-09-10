@@ -38,7 +38,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="SelectGallery" type="text" default="" label="" description="">
+				<field name="SelectGalleries" type="text" default="" label="" description="">
 				</field>
 				<field name="@spacer" type="spacer" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC" />
 				<field name="ScrollDirection" type="list" default="up" label="MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION" description="">
@@ -65,12 +65,12 @@
 				</field>
 				<field name="@spacer" type="spacer" default="" label="" description="" />
 				<field name="ScrollWidth" type="text" size="20" default="100" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH_DESC"/>
-				<field name="WidthUnit" type="radio" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
+				<field name="ScrollWidthUnit" type="radio" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
 					<option value="px">MOD_RSGALLERY2_THUMB_SCROLLER_PIXEL</option>
 					<option value="%">MOD_RSGALLERY2_THUMB_SCROLLER_PERCENT</option>
 				</field>
 				<field name="ScrollHeight" type="text" size="20" default="150" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_HEIGHT" description="Default is 150"/>
-				<field name="HeightUnit" type="radio" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
+				<field name="ScrollHeightUnit" type="radio" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
 					<option value="px">Px</option>
 					<option value="%">%</option>
 				</field>		
@@ -88,7 +88,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="css" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>	
+				<field name="UserCss" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>	
 
 				<field name="filteringspacer3" type="spacer" hr="true" />
 			</fieldset>			
