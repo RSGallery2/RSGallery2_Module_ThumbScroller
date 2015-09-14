@@ -57,27 +57,49 @@ $usecss			=			$params->get( 'usecss',			'1');
 $css			=			$params->get( 'css');
 */
 
-$UseACL              =		   $params->get( 'UseACL',			     '0');
+$UseACL              =		   $params->get( 'UseACL',			    '0');
 $UseGallerySelection =		   $params->get( 'UseGallerySelection', '0');
-$SelectGalleries     = trim   ($params->get( 'SelectGalleries',	 ''));
-$ScrollDirection     = trim   ($params->get( 'ScrollDirection',	 'up'));
-$ScrollAmount        = intval ($params->get( 'ScrollAmount',		 ''));
-$ScrollDelay         = intval ($params->get( 'ScrollDelay',		 ''));
+$GalleryIds          = trim   ($params->get( 'SelectGalleries',	    ''));
+$ScrollDirection     = trim   ($params->get( 'ScrollDirection',	    'up'));
+$ScrollAmount        = intval ($params->get( 'ScrollAmount',		''));
+$ScrollDelay         = intval ($params->get( 'ScrollDelay',		    ''));
 
-$ImageLinkType       =		   $params->get( 'ImageLinkType',		 '');
-$DoPause             =		   $params->get( 'DoPause',			 '');
+$ImageLinkType       =		   $params->get( 'ImageLinkType',		'');
+$DoPause             =		   $params->get( 'DoPause',			    '');
 
-$ScrollWidth         = intval ($params->get( 'ScrollWidth',		 ''));
-$ScrollWidthUnit     =		   $params->get( 'ScrollWidthUnit',	 '');
+$ScrollWidth         = intval ($params->get( 'ScrollWidth',	  	    ''));
+$ScrollWidthUnit     =		   $params->get( 'ScrollWidthUnit',	    '');
 
-$ScrollHeight        = intval ($params->get( 'ScrollHeight',		 ''));
-$ScrollHeightUnit    =		   $params->get( 'ScrollHeightUnit',	 '');
+$ScrollHeight        = intval ($params->get( 'ScrollHeight',		''));
+$ScrollHeightUnit    =		   $params->get( 'ScrollHeightUnit',	'');
 
-$ImageNumber         = intval ($params->get( 'ImageNumber',		 ''));
-$ImageSource         =		   $params->get( 'ImageSource',		 '');
+$ImageNumber         = intval ($params->get( 'ImageNumber',  	    ''));
+$ImageSource         =		   $params->get( 'ImageSource',		    '');
 
-$ActivateUserCss     =		   $params->get( 'ActivateUserCss',	 '');
-$UserCss             =		   $params->get( 'UserCss',			 '');
+$ActivateUserCss     =		   $params->get( 'ActivateUserCss',	    '');
+$UserCss             =		   $params->get( 'UserCss',			    '');
+
+//--- Image links preparation -------------------------------------------
+
+$Rsg2ImageRoutes = new Rsg2ImageRoutes ();
+
+//--- Take View Access into account -------------------------------------------
+
+$user 		= JFactory::getUser();
+$groups		= $user->getAuthorisedViewLevels();
+$groupsIN 	= implode(", ",array_unique ($groups));
+$superAdmin = $user->authorise('core.admin');
+
+//--- Select specific galleries and possibly subs -----------------------------
+
+if ($GalleryIds) {
+	$GalleryArray = explode(',', $GalleryIds);
+    
+}
+
+
+
+
 
 
 //// Include the syndicate functions only once
