@@ -98,6 +98,9 @@ $rows = $database->LoadObjectList ();
 		echo "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>When executing:<br>\n$query\n<br>";
 	}
 
+	
+//=== View ================================================================================	
+	
 //css, the javascript that can insert it into the head, does not work properly in ie
 if($usecss){
 	echo "<style type=\"text/css\">".$css."</style>";

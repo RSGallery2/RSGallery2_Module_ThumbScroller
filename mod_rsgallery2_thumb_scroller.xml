@@ -76,10 +76,10 @@
 					<option value="%">%</option>
 				</field>		
 				<field name="@spacer" type="spacer" default="" label="" description=""/>	
-				<field name="ImageNumber" type="text" size="20" default="5" label="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES" description="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES_DESC"/>
-				<field name="ImageSource" type="list" default="Rand()" label="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE" description="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE_DESC">
+				<field name="ImageCount" type="text" size="20" default="5" label="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES" description="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES_DESC"/>
+				<field name="ImageOrder" type="list" default="Rand()" label="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE" description="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE_DESC">
 					<option value="Rand()">MOD_RSGALLERY2_THUMB_SCROLLER_RANDOM</option>
-					<option value="Date">MOD_RSGALLERY2_THUMB_SCROLLER_DATE</option>
+					<option value="Date DESC">MOD_RSGALLERY2_THUMB_SCROLLER_DATE</option>
 					<option value="Hits">MOD_RSGALLERY2_THUMB_SCROLLER_HITS</option>
 					<option value="Votes">MOD_RSGALLERY2_THUMB_SCROLLER_VOTES</option>
 					<option value="Rating">MOD_RSGALLERY2_THUMB_SCROLLER_RATING</option>

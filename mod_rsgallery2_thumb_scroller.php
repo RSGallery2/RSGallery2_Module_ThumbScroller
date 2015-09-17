@@ -18,6 +18,8 @@
 // No direct access
 defined('_JEXEC') or die;
 
+// Returns lists of galleries and images 
+require_once dirname(__FILE__) . '/Rsg2DbSelections.php';
 
 // returns links to be used in Jroute() to images views inside galleries
 require_once dirname(__FILE__) . '/Rsg2ImageRoutes.php';
@@ -33,29 +35,6 @@ $document->addStyleSheet($url);
 global $rsgConfig;
 
 //--- Parameters --------------------------------------------------------------
-
-
-/*
-$Clickornot 	= 			$params->get( 'Clickornot',		'1');
-$link2gal		= trim   (	$params->get( 'link2gal',		'dis'));
-$Pause			= 			$params->get( 'Pause',			'1');
-$useACL 		= 			$params->get( 'useACL',			'0');
-$usegalselect 	= 			$params->get( 'usegalselect',	'0');
-$galselect 		= 			$params->get( 'galselect');		
-$Width			= intval (	$params->get( 'Width',			'80'));
-$WidthUnit	 	= trim 	(	$params->get( 'widthunit',		'%'));
-$Height			= intval (	$params->get( 'Height',			'150'));
-$HeightUnit	 	= trim 	(	$params->get( 'heightunit',		'px'));
-$PicsNum		= intval (	$params->get( 'PicsNum',		'5'));
-$PickMethod		= trim   (	$params->get( 'PickMethod',		'Rand()'));
-$ScrollDirection= trim   (	$params->get( 'ScrollDirection','up'));
-$ScrollAmount	= intval (	$params->get( 'ScrollAmount',	'2'));
-$ScrollDelay	= intval (	$params->get( 'ScrollDelay',	'50'));
-$ScrollSpace	= intval (	$params->get( 'ScrollSpace',	'2'));
-$BugSpace		= intval (	$params->get( 'BugSpace',		'10'));
-$usecss			=			$params->get( 'usecss',			'1');
-$css			=			$params->get( 'css');
-*/
 
 $UseACL              =		   $params->get( 'UseACL',			    '0');
 $UseGallerySelection =		   $params->get( 'UseGallerySelection', '0');
@@ -73,13 +52,20 @@ $ScrollWidthUnit     =		   $params->get( 'ScrollWidthUnit',	    '');
 $ScrollHeight        = intval ($params->get( 'ScrollHeight',		''));
 $ScrollHeightUnit    =		   $params->get( 'ScrollHeightUnit',	'');
 
-$ImageNumber         = intval ($params->get( 'ImageNumber',  	    ''));
-$ImageSource         =		   $params->get( 'ImageSource',		    '');
+$ImageCount          = intval ($params->get( 'ImageNumber',  	    ''));
+$ImageOrder          =		   $params->get( 'ImageSource',		    '');
 
 $ActivateUserCss     =		   $params->get( 'ActivateUserCss',	    '');
 $UserCss             =		   $params->get( 'UserCss',			    '');
 
+$IncludeChildren	 =         $params->get( 'includechildren',    '0');
+
+
 //--- Image links preparation -------------------------------------------
+
+$Rsg2DbSelections = new Rsg2DbSelections ();
+
+//--- Db image selections preparation -------------------------------------------
 
 $Rsg2ImageRoutes = new Rsg2ImageRoutes ();
 
@@ -92,18 +78,74 @@ $superAdmin = $user->authorise('core.admin');
 
 //--- Select specific galleries and possibly subs -----------------------------
 
+// Selection requested ?
 if ($GalleryIds) {
-	$GalleryArray = explode(',', $GalleryIds);
+	$galleryArray = explode(',', $GalleryIds);
     
+	// Include children?
+	if ($includeChildren) {
+        
+		// All galleries
+		$allGalleries = $Rsg2DbSelections->ListOfAllGalleriesOrdered (); 
+		
+		// Collect children -> 2dim. array $children[parentid][]
+		// Establish the hierarchy by first getting the children 
+		$children = array();
+		if ( $allGalleries ) {
+			foreach ( $allGalleries as $v ) {
+				$pt     = $v->parent;
+				$list   = @$children[$pt] ? $children[$pt] : array();
+				array_push( $list, $v );
+				$children[$pt] = $list;
+			}
+		}
+        
+		// Function to build children tree list 
+		function treerecurse($ParentId,  $list, &$children, $maxlevel=20, $level=0) {
+			// if there are children for this id and the max.level isn't reached
+			if (@$children[$ParentId] && $level <= $maxlevel) {
+				// Add each child to the $list and ask for its children
+				foreach ($children[$ParentId] as $v) {
+					$id = $v->id;	//gallery id
+					$list[$id] = $v;
+					$list[$id]->level = $level;
+					//$list[$id]->children = count(@$children[$id]);
+					$list = treerecurse($id,  $list, $children, $maxlevel, $level+1);
+				}
+			}
+			return $list;
+		}
+
+		// Get the children of the user selected galleries
+		$extendedSelection = $galleryArray;
+		foreach ($galleryArray as $galUser) {
+            // Get list of galleries with (grand)children in the right order and with level info
+    		$recursiveGalleriesList = treerecurse( $galUser, array(), $children, 20, 0 );
+			foreach ($recursiveGalleriesList as $gal) {
+				array_push($extendedSelection, $gal->id);
+			}
+		}
+		$gallerySelection = implode(", ",array_unique ($extendedSelection));
+	} else {	// Don't include children
+		$gallerySelection = implode(", ",array_unique ($galleryArray));
+	}
+} else {
+	// No 'where' clause needed to limit the search of galleries from
+	$gallerySelection = 0;
 }
 
+//--- Query images -----------------------------------------------------
 
+// Query to get limited ($count) number of latest images
+$ImageList = $Rsg2DbSelections->ImageNamesLimitedAndOrdered ($ImageCount, $gallerySelection, $ImageOrder);
+if(!$ImageList){
+	// Error handling
+	// ToDo: Ask module admin if a message is required (?debug) and to provide this error message
+	// enque message
+}
 
-
-
-
-//// Include the syndicate functions only once
-//require_once dirname(__FILE__) . '/helper.php';
+//--- Output ------------------------------------------------------------------
  
-//$hello = modHelloWorldHelper::getHello($params);
 require JModuleHelper::getLayoutPath('mod_rsgallery2_thumb_scroller');
+
+
