@@ -7,6 +7,7 @@
 
 defined('_JEXEC') or die();
 
+/*
 echo '<h1>mod_rsgallery2_thumb_scroller</h1>' . '<br>';
 
 echo '$UseACL              = ' . $UseACL . '<br>';
@@ -39,7 +40,7 @@ echo '$dbImage.count=' . count ($ImageList) . '<br>';
 foreach ($ImageList as $dbImage) {
     echo 'Image Name= ' . $dbImage['name'] . '<br>';
 }
-
+*/
 
 echo '<div class="mod_rsgallery2_latest_images">';
 
