@@ -31,11 +31,11 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field name="@spacer" type="spacer" default="" label="" description="" />
-				<field name="UseACL" type="radio" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL_DESC">
+				<field name="UseACL" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="UseGallerySelection" type="radio" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES" description="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES_DESC">
+				<field name="UseGallerySelection" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES" description="MOD_RSGALLERY2_THUMB_SCROLLER_LIMIT_GALLERIES_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
@@ -60,18 +60,18 @@
                     <option value="5">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DISPLAY_SIZE_IMAGE</option>
                     <option value="6">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_THUMB_SIZE_IMAGE_VIEW</option>
                 </field>
-				<field name="DoPause" type="radio" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER" description="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER_DESC">
+				<field name="DoPause" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER" description="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 				<field name="@spacer" type="spacer" default="" label="" description="" />
 				<field name="ScrollWidth" type="text" size="20" default="100" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH_DESC"/>
-				<field name="ScrollWidthUnit" type="radio" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
+				<field name="ScrollWidthUnit" type="radio" class="btn-group btn-group-yesno" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
 					<option value="px">MOD_RSGALLERY2_THUMB_SCROLLER_PIXEL</option>
 					<option value="%">MOD_RSGALLERY2_THUMB_SCROLLER_PERCENT</option>
 				</field>
 				<field name="ScrollHeight" type="text" size="20" default="150" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_HEIGHT" description="Default is 150"/>
-				<field name="ScrollHeightUnit" type="radio" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
+				<field name="ScrollHeightUnit" type="radio" class="btn-group btn-group-yesno" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
 					<option value="px">Px</option>
 					<option value="%">%</option>
 				</field>		
@@ -85,7 +85,7 @@
 					<option value="Rating">MOD_RSGALLERY2_THUMB_SCROLLER_RATING</option>
 				</field>	
 				<field name="@spacer" type="spacer" default="" label="" description=""/>
-				<field name="ActivateUserCss" type="radio" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS_DESC">
+				<field name="ActivateUserCss" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
