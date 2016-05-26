@@ -4,7 +4,7 @@
 /**
 * RSGallery2 thumbnail scroller module:
 * Shows latest galleries from the Joomla extension RSGallery2 (www.rsgallery2.nl).
-* @copyright (C) 2012-2015 RSGallery2 Team
+* @copyright (C) 2012-2016 RSGallery2 Team
 * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
 * @version 4.0.0
 * @ Develpment in order of newest appearance
