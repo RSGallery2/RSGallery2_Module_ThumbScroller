@@ -6,7 +6,7 @@
 	<copyright>This module is released under the GNU/ GPL license</copyright>
 	<authorEmail>mail@danieltulp.nl</authorEmail>
 	<authorUrl>http://design.danieltulp.nl</authorUrl>
-	<version>2.0</version>
+	<version>2.0.1</version>
 	<description>
 		Scrolls selected thumbnails from the RSGallery2 component for Joomla!.
 		Note: this module uses the proprietary tag marquee, therefore not valid.

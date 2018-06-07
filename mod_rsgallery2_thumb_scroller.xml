@@ -6,8 +6,8 @@
 	<copyright>(C) 2010-2018 RSGallery2 Team. All rights reserved.</copyright>
 	<license>This component is released under the GNU/GPL License</license>
     <authorEmail>team@rsgallery2.org</authorEmail>
-    <authorUrl>www.rsgallery2.nl</authorUrl>
-    <version>4.0.0</version>
+    <authorUrl>www.rsgallery2.org</authorUrl>
+    <version>4.0.1</version>
     <description>MOD_RSGALLERY2_THUMB_SCROLLER_DESC</description>
 	
 	<files>
@@ -132,4 +132,11 @@
 			</fieldset>
 		</fields>
 	</config>
+	
+	<updateservers>
+		<server type="extension"
+		        priority="1"
+		        name="Github RSGallery2 module thumb scroller updates">https://github.com/RSGallery2/RSGallery2_Plugin_DisplayGallery/raw/master/update.xml
+		</server>
+	</updateservers>
 </extension>

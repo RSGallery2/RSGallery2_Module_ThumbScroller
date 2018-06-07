@@ -26,7 +26,11 @@ Legend:
 
 
 
+* --- 4.0.0 --- 2018-06-06 --- whazzup ------------------------------
+(Not released yet)
 
+^ Pathes to files now written with slashes '../.../...' instead of '...' . DS . '...'
++ Added updateserver file
 
 
 ---------------- 4.0.0 -- (not in the SVN) -- 2015-08-28 -------------
