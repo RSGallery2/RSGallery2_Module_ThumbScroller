@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0" method="upgrade">
-	<name>RSGallery2 Thumbnail Scroller</name>
+	<name>mod_rsg2scroller</name>
 	<creationDate>5 december 2010</creationDate>
 	<author>Daniel Tulp and Radek Kafka</author>
 	<copyright>This module is released under the GNU/ GPL license</copyright>
@@ -8,8 +8,11 @@
 	<authorUrl>http://design.danieltulp.nl</authorUrl>
 	<version>2.0.1</version>
 	<description>
+		!!! prepared but not ready !!!
+	
+		RSGallery2 Thumbnail Scroller
 		Scrolls selected thumbnails from the RSGallery2 component for Joomla!.
-		Note: this module uses the proprietary tag marquee, therefore not valid.
+		Note: This module uses the proprietary tag marquee, therefore not valid.
 	</description>
 	<files>
 		<filename module="mod_rsg2scroller">mod_rsg2scroller.php</filename>
