@@ -30,7 +30,7 @@ if (count($RSG2Itemidobj) > 0)
 	$RSG2Itemid = $RSG2Itemidobj[0]->id;
 
 //initialise init file
-require_once(JPATH_SITE.DS.'administrator'.DS.'components'.DS.'com_rsgallery2'.DS.'init.rsgallery2.php');
+require_once(JPATH_SITE . '/administrator/components/com_rsgallery2/init.rsgallery2.php');
 
 // Retrieve the parameters.
 $Clickornot 	= 			$params->get( 'Clickornot',		'1');
