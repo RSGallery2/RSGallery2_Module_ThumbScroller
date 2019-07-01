@@ -3,7 +3,7 @@
 * Changelog for mod_rsgallery2_thumb_scroller 
 * @version $Id$
 * @package mod_rsgallery2_thumb_scroller
-* @copyright (C) 2015 - 2018 RSGallery2 Team
+* @copyright (C) 2015 - 2019 RSGallery2 Team
 * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
 **/
 

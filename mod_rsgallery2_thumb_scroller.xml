@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.0" method="upgrade">
-    <name>mod_rsgallery2_thumb_scroller</name>
-    <author>RSGallery2 Team</author>
-	<creationDate>06. Sep 2016</creationDate>
-	<copyright>(C) 2010-2018 RSGallery2 Team. All rights reserved.</copyright>
+	<name>mod_rsgallery2_thumb_scroller</name>
+	<version>4.0.1.0</version>
+	<author>RSGallery2 Team</author>
+	<creationDate>01. Jul. 2019</creationDate>
+	<copyright>(C) 2010-2019 RSGallery2 Team. All rights reserved.</copyright>
 	<license>This component is released under the GNU/GPL License</license>
-    <authorEmail>team@rsgallery2.org</authorEmail>
-    <authorUrl>www.rsgallery2.org</authorUrl>
-    <version>4.0.1</version>
-    <description>MOD_RSGALLERY2_THUMB_SCROLLER_DESC</description>
-	
+	<authorEmail>team@rsgallery2.org</authorEmail>
+	<authorUrl>www.rsgallery2.org</authorUrl>
+	<description>MOD_RSGALLERY2_THUMB_SCROLLER_DESC</description>
+
 	<files>
 		<filename>mod_rsgallery2_thumb_scroller.xml</filename>
 		<filename module="mod_rsgallery2_thumb_scroller">mod_rsgallery2_thumb_scroller.php</filename>
@@ -20,13 +20,13 @@
 		<folder>tmpl</folder>
 		<folder>language</folder>
 	</files>
-	
-    <languages>
-        <language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.ini</language>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.sys.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.ini</language>
 		<language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.sys.ini</language>
-    </languages>
+	</languages>
 
 	<config>
 		<fields name="params">
@@ -51,16 +51,16 @@
 				</field>
 				<field name="ScrollAmount" type="text" size="20" default="2" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT_DESC"/>
 				<field name="ScrollDelay" type="text" size="20" default="50" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY_DESC"/>
-				<field name="@spacer" type="spacer" default="" label="" description=""/> 
-                <field name="ImageLinkType" type="list" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE" description="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DESC">
-                    <option value="0">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_NO_LINK</option>
-                    <option value="1">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_PARENT_GALLERY_VIEW</option>
-                    <option value="2">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SINGLE_IMAGE_VIEW</option>
-                    <option value="3">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SLIDE_SHOW_VIEW</option>
-                    <option value="4">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_ORIGINAL_SIZE_IMAGE</option>
-                    <option value="5">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DISPLAY_SIZE_IMAGE</option>
-                    <option value="6">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_THUMB_SIZE_IMAGE_VIEW</option>
-                </field>
+				<field name="@spacer" type="spacer" default="" label="" description=""/>
+				<field name="ImageLinkType" type="list" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE" description="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DESC">
+					<option value="0">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_NO_LINK</option>
+					<option value="1">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_PARENT_GALLERY_VIEW</option>
+					<option value="2">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SINGLE_IMAGE_VIEW</option>
+					<option value="3">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_GALLERY_SLIDE_SHOW_VIEW</option>
+					<option value="4">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_ORIGINAL_SIZE_IMAGE</option>
+					<option value="5">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DISPLAY_SIZE_IMAGE</option>
+					<option value="6">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_THUMB_SIZE_IMAGE_VIEW</option>
+				</field>
 				<field name="DoPause" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER" description="MOD_RSGALLERY2_THUMB_SCROLLER_PAUSE_MOUSEOVER_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
@@ -75,8 +75,8 @@
 				<field name="ScrollHeightUnit" type="radio" class="btn-group btn-group-yesno" default="px" label="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_HEIGHT_UNIT_DESCR">
 					<option value="px">Px</option>
 					<option value="%">%</option>
-				</field>		
-				<field name="@spacer" type="spacer" default="" label="" description=""/>	
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description=""/>
 				<field name="ImageCount" type="text" size="20" default="5" label="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES" description="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES_DESC"/>
 				<field name="ImageOrder" type="list" default="Rand()" label="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE" description="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE_DESC">
 					<option value="Rand()">MOD_RSGALLERY2_THUMB_SCROLLER_RANDOM</option>
@@ -84,16 +84,16 @@
 					<option value="Hits">MOD_RSGALLERY2_THUMB_SCROLLER_HITS</option>
 					<option value="Votes">MOD_RSGALLERY2_THUMB_SCROLLER_VOTES</option>
 					<option value="Rating">MOD_RSGALLERY2_THUMB_SCROLLER_RATING</option>
-				</field>	
+				</field>
 				<field name="@spacer" type="spacer" default="" label="" description=""/>
 				<field name="ActivateUserCss" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="UserCss" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>	
+				<field name="UserCss" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>
 
 				<field name="filteringspacer3" type="spacer" hr="true" />
-			</fieldset>			
+			</fieldset>
 			<fieldset
 				name="advanced">
 				<field
@@ -132,7 +132,7 @@
 			</fieldset>
 		</fields>
 	</config>
-	
+
 	<updateservers>
 		<server type="extension"
 		        priority="1"
