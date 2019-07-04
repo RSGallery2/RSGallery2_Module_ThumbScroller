@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="module" version="1.5.0" method="upgrade">
+<extension type="module" 
+		   version="1.5.0" 
+		   client="site" 
+		   method="upgrade"
+>
 	<name>mod_rsg2scroller</name>
 	<creationDate>5 december 2010</creationDate>
 	<author>Daniel Tulp and Radek Kafka</author>
