@@ -25,17 +25,23 @@
 		<folder>language</folder>
 	</files>
 
-	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_rsgallery2_thumb_scroller.sys.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_rsgallery2_thumb_scroller.sys.ini</language>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_rsgallery2_thumb_scroller.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_rsgallery2_thumb_scroller.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_rsgallery2_thumb_scroller.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_rsgallery2_thumb_scroller.sys.ini</language>
 	</languages>
 
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description="" 
+                />
 				<field name="UseACL" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_ACL_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
@@ -46,7 +52,13 @@
 				</field>
 				<field name="SelectGalleries" type="text" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC">
 				</field>
-				<field name="@spacer" type="spacer" default="" label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC" />
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS" 
+                    description="MOD_RSGALLERY2_THUMB_SCROLLER_GALLERY_IDS_DESC" 
+                />
 				<field name="ScrollDirection" type="list" default="up" label="MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION" description="">
 					<option value="up">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_UP</option>
 					<option value="down">MOD_RSGALLERY2_THUMB_SCROLLER_DIRECTION_DOWN</option>
@@ -55,7 +67,13 @@
 				</field>
 				<field name="ScrollAmount" type="text" size="20" default="2" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_AMOUNT_DESC"/>
 				<field name="ScrollDelay" type="text" size="20" default="50" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_DELAY_DESC"/>
-				<field name="@spacer" type="spacer" default="" label="" description=""/>
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description=""
+                />
 				<field name="ImageLinkType" type="list" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE" description="MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_DESC">
 					<option value="0">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_NO_LINK</option>
 					<option value="1">MOD_RSGALLERY2_THUMB_SCROLLER_LINK_TYPE_PARENT_GALLERY_VIEW</option>
@@ -69,7 +87,13 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description="" 
+                />
 				<field name="ScrollWidth" type="text" size="20" default="100" label="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH" description="MOD_RSGALLERY2_THUMB_SCROLLER_SCROLL_WIDTH_DESC"/>
 				<field name="ScrollWidthUnit" type="radio" class="btn-group btn-group-yesno" default="%" label="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT" description="MOD_RSGALLERY2_THUMB_SCROLLER_WIDTH_UNIT_DESC">
 					<option value="px">MOD_RSGALLERY2_THUMB_SCROLLER_PIXEL</option>
@@ -80,7 +104,13 @@
 					<option value="px">Px</option>
 					<option value="%">%</option>
 				</field>
-				<field name="@spacer" type="spacer" default="" label="" description=""/>
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description=""
+                />
 				<field name="ImageCount" type="text" size="20" default="5" label="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES" description="MOD_RSGALLERY2_THUMB_SCROLLER_NUMBER_IMAGES_DESC"/>
 				<field name="ImageOrder" type="list" default="Rand()" label="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE" description="MOD_RSGALLERY2_THUMB_SCROLLER_IMAGE_SOURCE_DESC">
 					<option value="Rand()">MOD_RSGALLERY2_THUMB_SCROLLER_RANDOM</option>
@@ -89,15 +119,26 @@
 					<option value="Votes">MOD_RSGALLERY2_THUMB_SCROLLER_VOTES</option>
 					<option value="Rating">MOD_RSGALLERY2_THUMB_SCROLLER_RATING</option>
 				</field>
-				<field name="@spacer" type="spacer" default="" label="" description=""/>
+				<field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description=""
+                />
 				<field name="ActivateUserCss" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_USE_CSS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 				<field name="UserCss" type="textarea" rows="10" cols="20" default=".rsscroller_thumb {text-align:center;} .rsscroller_thumb img{ border:0; padding:3px;}" label="MOD_RSGALLERY2_THUMB_SCROLLER_CSS" description="MOD_RSGALLERY2_THUMB_SCROLLER_CSS_DESC"/>
 
-				<field name="filteringspacer3" type="spacer" hr="true" />
+				<field 
+                    name="filteringspacer3" 
+                    type="spacer" 
+                    hr="true" 
+                />
 			</fieldset>
+			
 			<fieldset
 				name="advanced">
 				<field
@@ -140,7 +181,8 @@
 	<updateservers>
 		<server type="extension"
 		        priority="1"
-		        name="Github RSGallery2 module thumb scroller updates">https://github.com/RSGallery2/RSGallery2_Plugin_DisplayGallery/raw/master/update.xml
+		        name="Github RSGallery2 module thumb scroller 
+				updates">https://raw.githubusercontent.com/RSGallery2/RSGallery2_Project/master/UpdateServer/RSG2_Module_LatestGalleries_update.xml
 		</server>
 	</updateservers>
 </extension>
